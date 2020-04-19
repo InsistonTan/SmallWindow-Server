@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>搜索-小窗户-分享你的生活</title>
+    <link rel="icon" href="../images/logo.png" type="images">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/functions.js"></script>
+    <script src="../js/showMessage.js"></script>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../css/search.css" rel="stylesheet" media="screen">
+    <link href="../css/index.css" rel="stylesheet" media="screen">
+    <link href="../css/head.css" rel="stylesheet" media="screen">
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<body style="background: url(../images/main4.jpg);background-repeat:no-repeat;background-size: 100% auto;background-attachment: fixed;">
+	<!-- 顶部导航栏 -->
+	<div>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+    <iframe src="../head.html" frameborder="0" width="100%" height="55px"></iframe>
+    </nav>
+    </div>
+    <!-- 下部主体 -->
+    <div id="Maincontainer" style="margin-top:75px;">
+        <div id="leftContent" style="width:30%;float:left;">
+            <p> </p>
+        </div>
+
+        <!-- 中间展示内容主体 -->
+        <div id="midContent" style="width:40%;float:left;background-color:rgba(255,255,255,0.5);padding-bottom:5%;" class="round shadow_div">
+            <div id="container" style="margin-top:10px;" >
+                <ul class="nav nav-tabs nav justify-content-center" role="tablist" style="">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#showUser" style="color: rgb(0,0,0);">用户</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#MessageBody" style="color: rgb(0,0,0);" onclick="searchMessage()">帖子</a>
+                    </li>
+                </ul>
+                <!-- tab panes -->
+                <div class="tab-content " style="padding-top: 20px;">
+                    <div id="showUser" class="container tab-pane active" style="width:60%;"></div>
+                    <div id="MessageBody" class="container tab-pane fade"></div>
+                </div>
+            </div>
+            <!-- 展示结果的div -->
+            <div id="resultBody">   </div>
+        </div>
+
+        <div id="rightContent" style="width:30%;float:left;">
+            <p> </p>
+        </div>
+    </div>
+    
+</body>
+</html>

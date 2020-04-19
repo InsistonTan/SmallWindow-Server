@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>个人主页-小窗户-分享你的生活</title>
+    <link rel="icon" href="../images/logo.png" type="images">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/seeMyHome.js"></script>
+    <script src="../js/functions.js"></script>
+    <script src="../js/showMessage.js"></script>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../css/home.css" rel="stylesheet" media="screen">
+    <link href="../css/index.css" rel="stylesheet" media="screen">
+    <link href="../css/head.css" rel="stylesheet" media="screen">
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<!-- <body style="background: url(../images/main3.jpg);background-repeat:no-repeat;background-size: 100% auto;background-attachment: fixed;"> -->
+<body style="background-image:linear-gradient(to bottom right,#CDC9A5,#FFFFF0);background-repeat:no-repeat;background-attachment: fixed;">
+	<!-- 顶部导航栏 -->
+    <div>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+    <iframe src="../head.html" frameborder="0" width="100%" height="55px"></iframe>
+    </nav>
+    </div>
+    <!-- 下方主体-->
+    <div id="container" style="margin-top:75px;">
+        <div id="topDiv" style="width:100%;text-align:center;">
+            <div style="padding-top: 20px;">
+                <img src="../images/bigUser.png" alt="头像">
+            </div>
+            <div id="username" style="padding-top:5px;font-size:17px;color:rgb(185,113,43);"><b>Username</b></div>
+            <div style="padding-top:8px;text-align:center;font-size:14px;">
+                <span class="infoText"><b>关注</b></span>
+                <span>
+                    <b><a id="t_followNum" href="#" style="text-decoration:none;">0</a></b>
+                </span>
+                <span class="infoText"><b>粉丝</b></span>
+                <span>
+                    <b><a id="t_fanNum" href="#" style="text-decoration:none;">0</a></b>
+                </span>
+                <span class="infoText"><b>帖子</b></span>
+                <span>
+                    <b><a id="t_messageNum" href="#" style="text-decoration:none;">0</a></b>
+                </span>
+            </div>
+            <div id="info" style="font-size:13px;padding-top:5px;">
+            <span>性别：<span id="sex">男</span></span>
+            <span style="margin-left:20px;">年龄：<span id="age">0</span></span>
+            </div>
+            <div style="padding-top:5px;font-size:12px;">
+                <span id="introduce">这个人很懒，什么都没留下...</span>
+                <a href="#" style="text-decoration:none;" onclick="openUpdateModal()">编辑资料</a>
+            </div>
+            
+        </div>
+        <div id="bottomDiv">
+            <div id="leftContent" style="width:30%;float:left;"><p> </p></div>
+            <div id="midContent" style="width:40%;float:left;">
+                <hr>
+                <div id="MessageBody"></div>
+            </div>
+            <div id="rightContent" style="width:30%;float:left;"><p> </p></div>
+        </div>
+
+        <!-- 模态框 -->
+        <div class="modal fade" id="updateInfoModal" style="margin-top:10%;">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="modal-title" style="color:#8B5A2B;">编辑个人资料</span>
+                        <button class="close" type="button" data-dismiss="modal">&times</button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                        <div class='form-group'>
+                            <label>性别：</label>
+                            <lable style="font-size:14px;"><input type='radio' name='optradio' value='男' id='radio_male'/>男</label>
+                            <label style="margin-left:5px;"><input type='radio' name='optradio' value='女' id='radio_female'/>女</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="age_input">年龄：</label>
+                            <input type="number" id="age_input" style="width:60px;">
+                        </div>
+                        <div class="form-group">
+                            <label for="introduce_input">一句话自我介绍：</label>
+                            <textarea id="introduce_input" cols="30" rows="3"></textarea>
+                        </div>
+                        <div id="updateResult" style="color:rgb(220,0,0);"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" type="button" onclick="updateInfo()">更新</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>

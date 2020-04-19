@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="test">
+        <input type="text" v-model="message">
+        <saygoodbye v-bind:msg="message"></saygoodbye>
+        <div v-for="item in result">
+            <div>{{item.Username}}</div>
+        </div>
+    </div>
+    
+    <script>
+        Vue.component("saygoodbye",{
+            props:["msg"],
+            template:"<p>{{msg}}</p>"
+        })
+        var app1=new Vue({
+            el:"#test",
+            data:{
+                message:"hello world!",
+                result:[{"Username":"123"},{"Username":"积锋"},{"Username":456}]
+            }
+        })
+        
+    </script>
+</body>
+</html>

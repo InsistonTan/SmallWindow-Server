@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>首页-小窗户-分享你的生活</title>
+    <link rel="icon" href="../images/logo.png" type="images">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/functions.js"></script>
+    <script src="../js/showMessage.js"></script>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../css/home.css" rel="stylesheet" media="screen">
+    <link href="../css/index.css" rel="stylesheet" media="screen">
+    <link href="../css/head.css" rel="stylesheet" media="screen">
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<!-- <body style="background: url(../images/main2.jpg);background-repeat:no-repeat;background-size: 100% auto;background-attachment: fixed;"> -->
+<body style="background-image:linear-gradient(to bottom right,#F5DEB3,#FFFFF0);background-repeat:no-repeat;background-attachment: fixed;">
+	<!-- 顶部导航栏 -->
+	<div>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+    <iframe src="../head.html" frameborder="0" width="100%" height="55px"></iframe>
+    </nav>
+    </div>
+
+    <div id="container" style="margin-top:75px;">
+        <!-- 左导航栏 -->
+        <div id="leftContent" style="width:30%;float:left;height:100%;">
+            <p> </p>
+            <nav class="nav nav-pills fixed-top nav justify-content-center rounded shadow_div" style="width: 10%;margin-top: 75px;margin-left: 17%;background-color: rgba(255,255,255,0.8);color: rgb(255,0,0);">
+                <ul class="navbar-nav" style="">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link font_shadow">热门</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link font_shadow">最新</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link font_shadow">视频</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link font_shadow">音乐</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="midContent" style="width:40%;float:left;">
+            <div>
+                <textarea class="rounded shadow_div" id="inputMessage" cols="72" rows="5" style="background-color:rgba(255,255,255,0.5);width:100%;" placeholder="写下你的心情..."></textarea>
+                <button type="button" class="btn btn-primary" style="width:60px;height:30px;font-size:12px;" onclick="submitMessage()">发表
+                </button>
+            </div>
+            <hr style="height:10px;">
+            <div id="MessageBody">
+                <!-- 一个帖子的div -->
+            </div>
+        </div>
+        <div id="rightContent" style="width:30%;float:left;">
+            <div id="infoShow" style="margin:10%;margin-top:0px; background-color:rgba(255,255,255,0.8);" class="rounded shadow_div">
+                <div style="text-align:center; padding-top:15px;">
+                    <a href="/html/seeMyHome.html"><img src="../images/bigUser.png" alt="账号图片"></a>
+                </div>
+                <div style="text-align:center;">
+                    <a id="username" class="font_shadow" href="/html/seeMyHome.html" style="text-decoration:none;color:rgb(205,133,63);">Username</a>
+                </div>
+                <hr>
+                <div style="padding-top:5px;text-align:center;padding-bottom:15px;">
+                    <span class="infoText">关注</span>
+                    <span>
+                        <b><a id="t_followNum" href="#" style="text-decoration:none;">0</a></b>
+                    </span>
+                    <span class="infoText">粉丝</span>
+                    <span>
+                        <b><a id="t_fanNum" href="#" style="text-decoration:none;">0</a></b>
+                    </span>
+                    <span class="infoText">帖子</span>
+                    <span>
+                        <b><a id="t_messageNum" href="#" style="text-decoration:none;">0</a></b>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

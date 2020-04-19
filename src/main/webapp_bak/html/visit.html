@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>他人主页-小窗户-分享你的生活</title>
+    <link rel="icon" href="../images/logo.png" type="images">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/visit.js"></script>
+    <script src="../js/functions.js"></script>
+    <script src="../js/showMessage.js"></script>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../css/home.css" rel="stylesheet" media="screen">
+    <link href="../css/index.css" rel="stylesheet" media="screen">
+    <link href="../css/head.css" rel="stylesheet" media="screen">
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<!-- <body style="background: url(../images/main3.jpg);background-repeat:no-repeat;background-size: 100% auto;background-attachment: fixed;"> -->
+<body style="background-image:linear-gradient(to bottom right,#C1CDC1,#FFFFF0);background-repeat:no-repeat;background-attachment: fixed;">
+	<!-- 顶部导航栏 -->
+    <div>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+    <iframe src="../head.html" frameborder="0" width="100%" height="55px"></iframe>
+    </nav>
+    </div>
+    <!-- 下方主体-->
+    <div id="container" style="margin-top:75px;">
+        <div id="topDiv" style="width:100%;text-align:center;">
+            <div style="padding-top: 20px;">
+                <img src="../images/bigUser.png" alt="头像">
+            </div>
+            <div id="username" style="padding-top:5px;font-size:17px;color:rgb(185,113,43);"><b>Username</b></div>
+            <div id="followBtn"></div>
+            <div style="padding-top:8px;text-align:center;font-size:14px;">
+                <span class="infoText"><b>关注</b></span>
+                <span>
+                    <b><a id="t_followNum" href="#" style="text-decoration:none;">0</a></b>
+                </span>
+                <span class="infoText"><b>粉丝</b></span>
+                <span>
+                    <b><a id="t_fanNum" href="#" style="text-decoration:none;">0</a></b>
+                </span>
+                <span class="infoText"><b>帖子</b></span>
+                <span>
+                    <b><a id="t_messageNum" href="#" style="text-decoration:none;">0</a></b>
+                </span>
+            </div>
+            <div id="info" style="font-size:13px;padding-top:5px;">
+            <span>性别：<span id="sex">男</span></span>
+            <span style="margin-left:20px;">年龄：<span id="age">0</span></span>
+            </div>
+            <div style="padding-top:5px;font-size:12px;">
+                <span id="introduce">这个人很懒，什么都没留下...</span>
+            </div>
+            
+        </div>
+        <div id="bottomDiv">
+            <div id="leftContent" style="width:30%;float:left;"><p> </p></div>
+            <div id="midContent" style="width:40%;float:left;">
+                <hr>
+                <div id="MessageBody"></div>
+            </div>
+            <div id="rightContent" style="width:30%;float:left;"><p> </p></div>
+        </div> 
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>注册小窗户</title>
+    <link rel="icon" href="images/logo.png" type="images">
+    <script src="js/jquery-3.4.1.js"></script>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="js/index.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<!-- <body style="background-image: url(images/background2.jpg); background-repeat:no-repeat;background-size: 100% auto;background-attachment: fixed;"> -->
+<body style="background-image:linear-gradient(to bottom right,#FFDAB9,#FFFFF0);background-repeat:no-repeat;background-attachment: fixed;">
+    <div class="container">
+    <!-- 标题 -->
+    <div style="text-align: center;">
+        <h2 style="margin-top:30px;color:rgb(0,0,0);"><span class="my_tilte">小窗户-分享你的生活</span></h2>
+    </div>
+    <!-- 中间的主体-->
+    <div class="rounded shadow_div" style="position: fixed;top: 40%;left: 50%;width: 300px;height: 400px;transform: translate(-50%,-50%);background-color: rgba(255,255,255,0.8);margin-top:20px;">
+        <h5 style="text-align: center;margin: 10px;"><span style="color: rgb(50,50,50);" class="my_text">注册小窗户账号</span></h5>
+        <div class="form-group div-input">
+            <input class="form-control username shadow_div" id="r_username" type="text" placeholder="请输入用户名" style="text-indent:16px;"> 
+        </div>
+        <div class="form-group div-input" >
+            <input class="form-control password shadow_div" id="r_password1" type="password" placeholder="请输入密码" style="text-indent:16px;"> 
+        </div>
+        <div class="form-group div-input" >
+            <input class="form-control password shadow_div" id="r_password2" type="password" placeholder="确认密码" style="text-indent:16px;"> 
+        </div>
+        <div class="div-input">
+            <canvas id="codecanvas" class="codecanvas" height="40" width="80" onclick="creatCode()"></canvas>
+            <a href="#" onclick="creatCode()" style="margin-left: 10px;font-size: 13px;">看不清？换一个！</a>
+            <input type="text" class="form-control shadow_div" placeholder="验证码" id="r_code" style="width:80px;margin-top:10px;">
+            <p id="r_result" style="color: rgb(240,0,0);font-size:12px;margin-left:2px;margin-top:4px;"></p>
+        </div>
+        <div class="div-input"> 
+            <button id="Register" onclick="register()" style="width: 80px;" class="btn btn-primary">注册</button> 
+        </div>
+    </div>
+    <!-- 1 -->
+
+    <!-- 模态框 -->
+    <div class="modal fade" id="myModal" style="margin-top:10%;">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" style="color:#8B5A2B;">注册结果</h5>
+                     <button class="close" type="button" data-dismiss="modal" onclick="turnToLogin()">&times</button>
+                </div>
+                <div class="modal-body" id="modalBody" style="text-align: center;">
+                    <p class="text-muted">正在等待结果，请稍候...</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" data-dismiss="modal" onclick="turnToLogin()">好的</button>
+                </div>
+            </div>
+        </div>
+    </div>    
+  </div>  
+</body>
+
+</html>
