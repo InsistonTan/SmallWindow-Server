@@ -10,7 +10,7 @@
     <packaging>war</packaging>
     <properties>
         <file.encoding>UTF-8</file.encoding>
-        <spring.version>4.3.4.RELEASE</spring.version>
+        <spring.version>6.0.0</spring.version>
         <mysql.version>8.0.0</mysql.version>
         <servlet.version>2.5</servlet.version>
     </properties>
